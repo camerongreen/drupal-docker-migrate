@@ -12,6 +12,8 @@ cp .docker/build-assets/settings.local.php web/sites/default
 
 chmod 644 web/sites/default/*.php
 
+drush upwd admin password
+
 drush -y updatedb
 
 composer require --dev \
@@ -32,4 +34,3 @@ drush pm:enable -y \
   migrate_plus \
   migrate_drupal
 
-drush upwd admin password

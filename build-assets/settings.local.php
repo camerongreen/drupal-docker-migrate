@@ -1,5 +1,7 @@
 <?php
 
+$settings['hash_salt'] = getenv('HASH_SALT');
+
 $databases['default']['default'] = [
   'database' => getenv('DB_NAME'),
   'username' => getenv('DB_USER'),

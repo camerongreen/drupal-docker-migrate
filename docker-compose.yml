@@ -35,6 +35,7 @@ services:
     container_name: "${PROJECT_NAME}_php"
     environment:
       TZ: $TIMEZONE
+      HASH_SALT: $TIMEZONE
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
 #      PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S opensmtpd:25      
       DB_HOST: $DB_HOST
