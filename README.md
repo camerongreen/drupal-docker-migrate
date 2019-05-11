@@ -23,6 +23,10 @@ composer create-project drupal-composer/drupal-project:8.x-dev . --no-interactio
 Then copy this repository to a directory named _.docker_ in the base of your install, at the same level as the web
 directory.
 
+```bash
+git clone git@github.com:camerongreen/drupal-docker-migrate.git .docker
+```
+
 ### Initialising databases
 
 Put a copy of your Drupal 7 database sql into the _build-assets/db7_ directory.
@@ -39,7 +43,7 @@ _/etc/hosts_ file.
 
 ### Go...
 
-Run the containers.
+_cd_ in to the _.docker_ directory and run the containers.
 
 ```bash
 docker-compose up -d --build
@@ -49,6 +53,8 @@ Run the initialisation script:
 ```bash
 docker-compose exec php bash -c 'bash .docker/init-drupal.sh'
 ```
+
+And you are done.
 
 Get into the container and start running drush migrate:* commands.
 
